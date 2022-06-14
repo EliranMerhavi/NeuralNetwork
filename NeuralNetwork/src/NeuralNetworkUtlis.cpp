@@ -40,7 +40,8 @@ float d_sigmoid(float x)
 
 float d_tanh(float x)
 {
-	return -1.0f;
+	float y = tanh(x);
+	return 1 - y * y;
 }
 
 Function get_activation_function(ActivationFunctionType type)
