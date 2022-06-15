@@ -162,16 +162,14 @@ float NeuralNetwork::train(std::vector<float> input_layer, std::vector<float> an
 
 std::vector<float> NeuralNetwork::predict(std::vector<float> input_layer)
 {
-	std::vector<float> input = input_layer;
-	std::vector<float> output = input_layer;
+	std::vector<float> v = input_layer;
 	
 	for (Layer& layer : layers)
 	{		
-		output = layer.activate(input);
-		input = output;
+		v = layer.activate(v);
 	}
 
-	return output;
+	return v;
 }
 
 
