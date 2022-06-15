@@ -160,7 +160,6 @@ float NeuralNetwork::train(std::vector<float> input_layer, std::vector<float> an
 	return cost;
 }
 
-/*input must be heap allocated*/
 std::vector<float> NeuralNetwork::predict(std::vector<float> input_layer)
 {
 	std::vector<float> input = input_layer;
